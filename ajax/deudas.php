@@ -13,20 +13,26 @@ switch ($_GET["op"]){
 
     $resp=$deudas->EMI();
     $data= Array();
-    while (($row = oci_fetch_assoc($stid)) != false) {
-        $data[]=array(
-             "0"=>$row['EMI03CODI'],
-             "1"=>$row['EMI03DES'],
-             "2"=>$row['EMI03NOTA'],
-             "3"=>$row['EMI03TIPO']
-                     );
+
+    
+    while ($row =oci_fetch_assoc ($resp)){
+          
+     
+      $data[]=array(
+        '0'=>$row['EMI03CODI'],
+        '1'=>$row['EMI03DES'],
+        '2'=>$row['EMI03NOTA'],
+        '3'=>$row['EMI03TIPO']
+      );
+            }
+
             $results = array(
             "sEcho"=>1, 
             "iTotalRecords"=>count($data), 
             "iTotalDisplayRecords"=>count($data), 
             "aaData"=>$data);
         echo json_encode($results);
-    }
+    
 
     break;
     

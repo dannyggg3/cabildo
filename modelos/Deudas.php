@@ -9,7 +9,7 @@
       }
     
       public function EMI(){
-        $sql="SELECT * FROM EMI3 WHERE EMI03CODI IN (130,131,140)";
+        $sql="SELECT * FROM EMI03 WHERE EMI03CODI IN (130,131,140)";
         return ejecutarConsulta($sql);
       }
 

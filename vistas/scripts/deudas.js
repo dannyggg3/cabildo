@@ -34,3 +34,5 @@ function listar() {
           ]
   }).DataTable();
 }
+
+inico();

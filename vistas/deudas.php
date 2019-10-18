@@ -79,4 +79,7 @@ require 'footer.php';
 
 ?>
 <script type="text/javascript" src="scripts/deudas.js"></script>
+   
+      
+    
     
