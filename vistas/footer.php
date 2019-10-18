@@ -243,6 +243,8 @@
     <script src="../public/dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="../public/dist/js/custom.min.js"></script>
+    <script src="../public/assets/js/datatables/datatables.min.js"></script>
+    <script src="../public/assets/js/bootstrap-select/bootstrap-select.min.js"></script>
 </body>
 
 </html>
