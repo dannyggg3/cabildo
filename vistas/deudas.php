@@ -40,7 +40,24 @@ require 'header.php';
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                This is some text within a card block.
+                            <div class="table-responsive" >
+                            <table id="tbllistado" class="table responsive">
+                            <thead>
+                                <th>EMICODI</th>
+                                <th>EMIDES</th>
+                                <th>EMINOTA</th>
+                                <th>EMITIPO</th>
+                            </thead>
+                            <tbody>                            
+                            </tbody>
+                            <tfoot>
+                                <th>EMICODI</th>
+                                <th>EMIDES</th>
+                                <th>EMINOTA</th>
+                                <th>EMITIPO</th>
+                            </tfoot>
+                            </table>
+                            </div>
                             </div>
                         </div>
                     </div>
