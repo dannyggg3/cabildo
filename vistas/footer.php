@@ -1,21 +1,4 @@
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Right sidebar -->
-                <!-- ============================================================== -->
-                <!-- .right-sidebar -->
-                <!-- ============================================================== -->
-                <!-- End Right sidebar -->
-                <!-- ============================================================== -->
-                </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer text-center">
+<footer class="footer text-center">
        All Rights Reserved by Xtreme admin. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a>.
 </footer>
             <!-- ============================================================== -->
@@ -260,8 +243,6 @@
     <script src="../public/dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="../public/dist/js/custom.min.js"></script>
-    <script src="../public/dist/js/custom.min.js"></script>
-    <script src="../public/assets/js/datatables/datatables.min.js"></script>
 </body>
 
 </html>
