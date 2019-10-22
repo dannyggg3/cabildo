@@ -2,8 +2,6 @@
 //Ip de la pc servidor de base de datos
 define("DB_HOST","localhost/cabildo");
 
-//Nombre de la base de datos
-define("DB_NAME", "caltu");
 
 //Usuario de la base de datos
 define("DB_USERNAME", "SYSTEM");

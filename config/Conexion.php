@@ -24,5 +24,14 @@ if (!function_exists('ejecutarConsulta'))
 		$resp=  oci_execute($query,OCI_DEFAULT);
 		return $query;
 	}
+
+	function ejecutarConsultaSimpleFila($sql)
+	{
+		global $conexion;
+		$query = oci_parse($conexion,$sql);
+		$resp=  oci_execute($query,OCI_DEFAULT);
+		$row = oci_fetch_assoc ($query);
+		return $row;
+	}
 }
 ?>
