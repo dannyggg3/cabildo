@@ -128,8 +128,6 @@ switch ($_GET["op"]){
     // die();
     $valore=explode("/",$Expiry);
 
-
-
     $bandera=true;
 
 $curl = curl_init();
@@ -143,7 +141,7 @@ $data = array(
         "expiryYear"=> $valore[1],
         "cvv"=> $CVC
     ),
-      "totalAmount"=> number_format($total, 2, '.', ' '),
+      "totalAmount"=> 30.15,
       "currency"=> "USD"
   
 );
@@ -161,10 +159,10 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 300000,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "{\"card\":{\"name\":\"TESTING\",\"number\":\"4386261181077714\",\"expiryMonth\":\"08\",\"expiryYear\":\"23\",\"cvv\":\"121\"},\"totalAmount\":30.15,\"currency\":\"USD\"}",
+  CURLOPT_POSTFIELDS => $payload,
   CURLOPT_HTTPHEADER => array(
     "Content-Type: application/json",
-    "Public-Merchant-Id: 6000000000157167768216299637443"
+    "Public-Merchant-Id: 6000000000157183998821393012122"
   ),
 ));
 
@@ -174,7 +172,7 @@ $err = curl_error($curl);
 curl_close($curl);
 
 if ($err) {
-    echo $err;
+    echo $rr;
 } else {
 
     $response=json_decode($response);
@@ -219,7 +217,7 @@ curl_setopt_array($curl, array(
   CURLOPT_POSTFIELDS => $payload,
   CURLOPT_HTTPHEADER => array(
     "Content-Type: application/json",
-    "Private-Merchant-Id: 6000000000157167768216227340630"
+    "Private-Merchant-Id: 6000000000157183998821345007726"
   ),
 ));
 
