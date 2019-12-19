@@ -48,6 +48,7 @@ switch ($_GET["op"]){
      break;
 
 
+
      case 'totales':
      $texto=$_POST['texto'];
      $resp=$deudas->totalesBuscar($texto);

@@ -47,6 +47,44 @@ switch ($_GET["op"]){
              }
      break;
 
+     case 'sum':
+      $count_predios_urbanos=0;
+      $count_agua_potable=0;
+      $count_patente_municipal=0;
+      $count_predios_urbanos_pendi=0;
+      $count_agua_potable_pendi=0;
+      $count_patente_municipal_pendi=0;
+
+       $resp=$deudas->count_predios_urbanos();
+       $row =oci_fetch_assoc($resp);
+       $count_predios_urbanos=$row['PREDIOS_URBANOS'];
+       $resp=$deudas->count_agua_potable();
+       $row =oci_fetch_assoc($resp);
+       $count_agua_potable=$row['AGUA_POTABLE'];
+       $resp=$deudas->count_patente_municipal();
+       $row =oci_fetch_assoc($resp);
+       $count_patente_municipal=$row['PATENTE_MUNICIPAL'];
+       $resp=$deudas->count_predios_urbanos_pendi();
+       $row =oci_fetch_assoc($resp);
+       $count_predios_urbanos_pendi=$row['PREDIOS_URBANOS'];
+       $resp=$deudas->count_agua_potable_pendi();
+       $row =oci_fetch_assoc($resp);
+       $count_agua_potable_pendi=$row['AGUA_POTABLE'];
+       $resp=$deudas->count_patente_municipal_pendi();
+       $row =oci_fetch_assoc($resp);
+       $count_patente_municipal_pendi=$row['PATENTE_MUNICIPAL'];
+       $results=array(
+            'count_predios_urbanos'=>$count_predios_urbanos,
+            'count_agua_potable'=>$count_agua_potable,
+            'count_patente_municipal'=>$count_patente_municipal,
+            'count_predios_urbanos_pendi'=>$count_predios_urbanos_pendi,
+            'count_agua_potable_pendi'=>$count_agua_potable_pendi,
+            'count_patente_municipal_pendi'=>$count_patente_municipal_pendi
+       );
+       echo json_encode($results);
+
+     break;
+
 
      case 'totales':
      $texto=$_POST['texto'];

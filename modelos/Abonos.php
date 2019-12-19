@@ -23,6 +23,8 @@
         return ejecutarConsulta($sql);
       }
 
+    
+ 
 
       public function buscar_predios_urbanos($texto){
         $sql="SELECT * FROM WEB_DEUDAS WHERE IMP IN (140) AND ESTADO='ABONOS' AND (CEDULA_RUC='$texto' OR CIU='$texto' )";

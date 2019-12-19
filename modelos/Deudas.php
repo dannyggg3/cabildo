@@ -13,6 +13,36 @@
         return ejecutarConsulta($sql);
       }
 
+      public function count_predios_urbanos(){
+        $sql="SELECT COUNT(*) AS PREDIOS_URBANOS FROM WEB_DEUDAS WHERE IMP IN (140) AND ESTADO='ABONOS' ";
+        return ejecutarConsulta($sql);
+      }
+
+      public function count_agua_potable(){
+        $sql="SELECT COUNT(*) AS AGUA_POTABLE FROM WEB_DEUDAS WHERE IMP IN (131) AND ESTADO='ABONOS' ";
+        return ejecutarConsulta($sql);
+      }
+
+      public function count_patente_municipal(){
+        $sql="SELECT COUNT(*) AS PATENTE_MUNICIPAL FROM WEB_DEUDAS WHERE IMP IN (130) AND ESTADO='ABONOS' ";
+        return ejecutarConsulta($sql);
+      }
+
+      public function count_predios_urbanos_pendi(){
+        $sql="SELECT COUNT(*) AS PREDIOS_URBANOS FROM WEB_DEUDAS WHERE IMP IN (140) AND ESTADO='PENDIENTES' ";
+        return ejecutarConsulta($sql);
+      }
+
+      public function count_agua_potable_pendi(){
+        $sql="SELECT COUNT(*) AS AGUA_POTABLE FROM WEB_DEUDAS WHERE IMP IN (131) AND ESTADO='PENDIENTES' ";
+        return ejecutarConsulta($sql);
+      }
+
+      public function count_patente_municipal_pendi(){
+        $sql="SELECT COUNT(*) AS PATENTE_MUNICIPAL FROM WEB_DEUDAS WHERE IMP IN (130) AND ESTADO='PENDIENTES' ";
+        return ejecutarConsulta($sql);
+      }
+
       public function buscar($texto){
         $sql="SELECT * FROM WEB_DEUDAS WHERE IMP IN (130,131,140) AND ESTADO='PENDIENTES' AND (CEDULA_RUC='$texto' OR CIU='$texto' )";
         return ejecutarConsulta($sql);
