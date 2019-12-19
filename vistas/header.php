@@ -15,6 +15,7 @@
     <!-- Custom CSS -->
     <link href="../public/dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../public/assets/js/loading/loading.css">
     <link href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,22 +53,22 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="index.php">
                         <!-- Logo icon -->
                         <b class="logo-icon">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="../public/assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="../public/img/gad-pelileo.png" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="../public/assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            <img src="../public/img/gad-pelileo.png" alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span class="logo-text">
                              <!-- dark Logo text -->
-                             <img src="../public/assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                             <!-- Light Logo text -->    
-                             <img src="../public/assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                             <!-- <img src="../public/img/gad-pelileo.png" alt="homepage" class="dark-logo" /> -->
+                            <!-- Light Logo icon -->
+                            <!-- <img src="../public/img/gad-pelileo.png" alt="homepage" class="light-logo" /> -->
                         </span>
                     </a>
                     <!-- ============================================================== -->
@@ -122,31 +123,27 @@
                         <!-- User Profile-->
                         <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Personal</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark" href="deudas.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Servicios</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Pago en línea </span></a>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">DEUDAS </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
                                 <li class="sidebar-item"><a href="buscar.php" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> Buscar </span></a></li>
-                                <li class="sidebar-item"><a href="index2.html" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> PREDIOS URBANOS </span></a></li>
-                                <li class="sidebar-item"><a href="index3.html" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> AGUA POTABLE </span></a></li>
-                                <li class="sidebar-item"><a href="index4.html" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> PATENTE MUNICIPAL </span></a></li>
+                                <li class="sidebar-item"><a href="buscar_predios_urbanos.php" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> PREDIOS URBANOS </span></a></li>
+                                <li class="sidebar-item"><a href="buscar_agua_potable.php" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> AGUA POTABLE </span></a></li>
+                                <li class="sidebar-item"><a href="buscar_patente_municipal.php" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> PATENTE MUNICIPAL </span></a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">ABONOS </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="buscar_abono.php" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> Buscar </span></a></li>
+                                <li class="sidebar-item"><a href="buscar_predios_urbanos_abono.php" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> PREDIOS URBANOS </span></a></li>
+                                <li class="sidebar-item"><a href="buscar_agua_potable_abono.php" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> AGUA POTABLE </span></a></li>
+                                <li class="sidebar-item"><a href="buscar_patente_municipal_abono.php" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> PATENTE MUNICIPAL </span></a></li>
 
                             </ul>
                         </li>
                         
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-notification-clear-all"></i><span class="hide-menu">Multi level DD</span></a>
-                            <ul aria-expanded="false" class="collapse first-level">
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> item 1.1</span></a></li>
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> item 1.2</span></a></li>
-                                <li class="sidebar-item"> <a class="has-arrow sidebar-link" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-playlist-plus"></i> <span class="hide-menu">Menu 1.3</span></a>
-                                    <ul aria-expanded="false" class="collapse second-level">
-                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> item 1.3.1</span></a></li>
-                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> item 1.3.2</span></a></li>
-                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> item 1.3.3</span></a></li>
-                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> item 1.3.4</span></a></li>
-                                    </ul>
-                                </li>
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i class="mdi mdi-playlist-check"></i><span class="hide-menu"> item 1.4</span></a></li>
-                            </ul>
-                        </li>
+                       
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->

@@ -12,7 +12,7 @@ function cargarTotales(){
     var texto=$('#txt_buscar').val();
 
     $('body').loading();
-      $.post("../ajax/deudas.php?op=totales&text="+texto, { "texto":texto }, function(data, status) {
+      $.post("../ajax/abonos.php?op=totalesPediosUrbanos&text="+texto, { "texto":texto }, function(data, status) {
         data = JSON.parse(data);
         console.log(data)
             $("#temision").html(data.totalemision)
@@ -41,7 +41,7 @@ function listar() {
       ],
      //ajax metodo post ara cojes los datos pero envio por get la variable op
       "ajax": {
-          url: "../ajax/deudas.php?op=buscar&text="+texto,
+          url: "../ajax/abonos.php?op=buscar_predios_urbanos&text="+texto,
           type: "get",
           dataType: "json",
           error: function(e) {
@@ -60,7 +60,7 @@ function detalles(num_emision){
    
    
 
-    $.post("../ajax/deudas.php?op=mostrarDetalles", { num_emision: num_emision }, function(data, status) {
+    $.post("../ajax/abonos.php?op=mostrarDetalles", { num_emision: num_emision }, function(data, status) {
         data = JSON.parse(data);
    
         $('#txt_n_emision').val(data.NROEMISION);
@@ -93,7 +93,7 @@ function realizarPago(){
    var CVC=$('#CVC').val();
    var nameCard=$('#nameCard').val();
 
-    $.post("../ajax/deudas.php?op=realizarPago", { 
+    $.post("../ajax/abonos.php?op=realizarPago", { 
         id: id,
         totalCarr : totalCarr, 
         numCard : numCard, 

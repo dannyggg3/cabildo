@@ -1,9 +1,9 @@
 
 <?php
-    require_once "../modelos/Deudas.php";
+    require_once "../modelos/Abonos.php";
 
     
-$deudas=new Deudas();
+$deudas=new Abonos();
 
 
 

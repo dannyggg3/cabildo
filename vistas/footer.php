@@ -1,5 +1,5 @@
 <footer class="footer text-center">
-       All Rights Reserved by Xtreme admin. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a>.
+       UNIANDES (LEONARDO)
 </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
@@ -256,6 +256,7 @@
     <script src="../public/dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="../public/dist/js/custom.min.js"></script>
+    <script src="../public/assets/js/loading/loading.js"></script>
   
 </body>
 

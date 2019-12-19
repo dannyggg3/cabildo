@@ -1,3 +1,4 @@
+
 var tabla;
 var kushki;
 var totalCarr;
@@ -12,7 +13,7 @@ function cargarTotales(){
     var texto=$('#txt_buscar').val();
 
     $('body').loading();
-      $.post("../ajax/deudas.php?op=totales&text="+texto, { "texto":texto }, function(data, status) {
+      $.post("../ajax/deudas.php?op=totalespatente_municipal&text="+texto, { "texto":texto }, function(data, status) {
         data = JSON.parse(data);
         console.log(data)
             $("#temision").html(data.totalemision)
@@ -41,7 +42,7 @@ function listar() {
       ],
      //ajax metodo post ara cojes los datos pero envio por get la variable op
       "ajax": {
-          url: "../ajax/deudas.php?op=buscar&text="+texto,
+          url: "../ajax/deudas.php?op=buscar_patente_municipal&text="+texto,
           type: "get",
           dataType: "json",
           error: function(e) {

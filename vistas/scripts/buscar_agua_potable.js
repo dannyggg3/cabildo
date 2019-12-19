@@ -12,7 +12,7 @@ function cargarTotales(){
     var texto=$('#txt_buscar').val();
 
     $('body').loading();
-      $.post("../ajax/deudas.php?op=totales&text="+texto, { "texto":texto }, function(data, status) {
+      $.post("../ajax/deudas.php?op=totalesagua_potable&text="+texto, { "texto":texto }, function(data, status) {
         data = JSON.parse(data);
         console.log(data)
             $("#temision").html(data.totalemision)
@@ -41,7 +41,7 @@ function listar() {
       ],
      //ajax metodo post ara cojes los datos pero envio por get la variable op
       "ajax": {
-          url: "../ajax/deudas.php?op=buscar&text="+texto,
+          url: "../ajax/deudas.php?op=buscar_agua_potable&text="+texto,
           type: "get",
           dataType: "json",
           error: function(e) {

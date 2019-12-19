@@ -6,8 +6,7 @@ require 'header.php';
         <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 align-self-center">
-                        <h2 class="page-title">BUSQUEDA DE DEUDAS DE TODOS LOS SERVICIOS</h2>
-                        
+                        <h2 class="page-title">BUSQUEDA DE ABONOS DE TODOS LOS SERVICIOS</h2>
                     </div>
                     
                 </div>
@@ -277,7 +276,7 @@ require 'header.php';
 require 'footer.php';
 
 ?>
-<script type="text/javascript" src="scripts/buscar.js"></script>
+<script type="text/javascript" src="scripts/buscar_abono.js"></script>
    
       
     
